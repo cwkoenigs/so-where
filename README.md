@@ -2,6 +2,8 @@
 
 Where keeps the skill, local website, example data, real map, and tests in one repository.
 
+GitHub: [cwkoenigs/so-where](https://github.com/cwkoenigs/so-where) (private).
+
 ```bash
 make demo
 ```
