@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-10-23T12:34:23+00:00",
+  "repository": "/Users/clarkkoenigs/Developer/so-where",
+  "branch": "main",
+  "remotes": "",
+  "listener": "COMMAND   PID         USER   FD   TYPE            DEVICE SIZE/OFF NODE NAME\nPython  19338 clarkkoenigs    4u  IPv4 0x95e4564104d3318      0t0  TCP 127.0.0.1:8765 (LISTEN)\n",
+  "pid": "19338",
+  "command": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python so-where/references/where.py --root demo serve --port 8765",
+  "cwd": "p19338\nfcwd\nn/Users/clarkkoenigs/Developer/so-where",
+  "http_status": 200,
+  "html_sha256": "98a894df313f548ede840ba168f46ec1f913fa1e2147b33754aec60d94380535",
+  "source_hashes": {
+    "so-where/references/where.py": "e869b4d100f96a5ccc9979a31d847eb4ef850562ba2d0fbcbbde9623980a6946",
+    "so-where/references/dashboard.html": "b93a97d7a9d46acd86295d14d79692ff26f0c21dde76b80dc6745126e2ae32f4",
+    "demo/registry.json": "de48110023737e33475032e358ea0ae233c85d086c8b14a1a464512ab3413d48"
+  },
+  "source_revision": "sha256:a902818cb45d1f557dee173d36d8b6a998a308c07df27d0ade86d80a2403bd08",
+  "deployment": "local-pid-19338-html-98a894df313f548e",
+  "installed_links": {
+    "/Users/clarkkoenigs/.codex/skills/so-where": "/Users/clarkkoenigs/Developer/so-where/so-where",
+    "/Users/clarkkoenigs/.claude/skills/so-where": "/Users/clarkkoenigs/Developer/so-where/so-where"
+  }
+}

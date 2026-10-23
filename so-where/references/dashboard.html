@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where — your operational map</title>
+<!-- @ds-favicon start -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%20viewBox=%220%200%2040%2040%22%3E%20%3Ctitle%3EData%20Science%3C/title%3E%20%3Crect%20width=%2240%22%20height=%2240%22%20fill=%22%2300aba5%22/%3E%20%3Ctext%20x=%2220%22%20y=%2227%22%20text-anchor=%22middle%22%20font-family=%22Georgia,serif%22%20font-size=%2222%22%20fill=%22%23021832%22%3Eds%3C/text%3E%20%3C/svg%3E">
+<!-- @ds-favicon end -->
+<style>
+/* @ds-theme start */
+/* Data Science — generated from design-system/tokens.json by scripts/build_theme.py. Do not edit: change tokens.json (or `make sync`) and run `make build`. */
+
+:root {
+  color-scheme: light;
+  --ifm-color-primary: #00aba5;
+  --ifm-color-primary-dark: #007f7b;
+  --ifm-color-primary-darker: #006d69;
+  --ifm-color-primary-darkest: #003f3d;
+  --ifm-color-primary-light: #54cbc4;
+  --ifm-color-primary-lighter: #77d8d2;
+  --ifm-color-primary-lightest: #dff7f5;
+  --ifm-background-color: #f3f7f7;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-color-base: #021832;
+  --ifm-color-content-secondary: #5d6c7d;
+  --ifm-color-emphasis-200: #d9e3e5;
+  --ifm-navbar-background-color: #021832;
+  --ifm-navbar-link-color: #e3e9ea;
+  --ifm-navbar-link-hover-color: #77d8d2;
+  --ifm-navbar-search-input-background-color: #0b1e2d;
+  --ifm-navbar-search-input-color: var(--ifm-navbar-link-color);
+  --ifm-navbar-search-input-placeholder-color: #9ca9bd;
+  --search-local-input-active-border-color: var(--ifm-navbar-link-hover-color);
+  --ifm-menu-color: #5d6c7d;
+  --ifm-menu-color-active: #006d69;
+  --ifm-menu-color-background-active: #dff7f5;
+  --ifm-link-color: #006d69;
+  --ifm-link-hover-color: #003f3d;
+  --ifm-code-background: #e7efef;
+  --ifm-toc-border-color: #d9e3e5;
+  --ifm-footer-background-color: #001126;
+  --ifm-footer-color: #c0cdd5;
+  --ifm-footer-link-color: var(--ifm-footer-color);
+  --ifm-footer-link-hover-color: var(--ifm-color-primary);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 171, 165, 0.12);
+  --search-local-modal-background: #ffffff;
+  --search-local-highlight-color: #006d69;
+  --search-local-hit-background: #f3f7f7;
+  --search-local-hit-color: #021832;
+  --search-local-muted-color: #5d6c7d;
+  --search-local-hit-active-color: #ffffff;
+  --space-menu-y: 1.25rem;
+  --space-menu-x: 0.8rem;
+  --ifm-menu-link-padding-vertical: 0.6rem;
+  --space-brand-gap: 0.4rem;
+  --space-footer: 1.4rem;
+  --space-h2-above: 2.25rem;
+  --space-content-top: 0.75rem;
+  --space-container-top: 2rem;
+  --space-article-bottom: 1rem;
+  --rule-width: 2px;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 4px;
+  --underline-offset-prose: 0.2em;
+  --underline-offset-navbar: 0.5em;
+  --ifm-global-radius: 0;
+  --ifm-border-radius: 0;
+  --ifm-card-border-radius: 0;
+  --ifm-button-border-radius: 0;
+  --ifm-code-border-radius: 0;
+  --ifm-alert-border-radius: 0;
+  --ifm-breadcrumb-border-radius: 0;
+  --ifm-pagination-nav-border-radius: 0;
+  --ifm-tabs-border-radius: 0;
+  --ifm-navbar-shadow: none;
+  --search-local-modal-shadow: 0 8px 28px rgba(2, 24, 50, 0.15);
+  --ifm-navbar-height: 4.25rem;
+  --doc-sidebar-width: 280px;
+  --navbar-logo-size: 34px;
+  --navbar-search-input-min-height: 2.25rem;
+  --h1-fluid-size: 4vw;
+  --breakpoint-mobile: 996px;
+  --font-base: 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-monospace: 'SFMono-Regular', Menlo, 'Courier New', monospace;
+  --type-h1-size: 3rem;
+  --type-h1-weight: 500;
+  --type-h1-tracking: -0.035em;
+  --type-h1-compact-size: 2.2rem;
+  --type-h1-compact-weight: 500;
+  --type-h1-compact-tracking: -0.035em;
+  --type-h2-size: 1.8rem;
+  --type-h2-weight: 500;
+  --type-h2-tracking: -0.035em;
+  --type-h3-size: 1.4rem;
+  --type-h3-weight: 500;
+  --type-h3-tracking: -0.035em;
+  --type-navbar-title-size: 1.5rem;
+  --type-navbar-title-weight: 500;
+  --type-navbar-title-tracking: -0.035em;
+  --type-navbar-title-compact-size: 1.3rem;
+  --type-navbar-title-compact-weight: 500;
+  --type-navbar-title-compact-tracking: -0.035em;
+  --type-body-size: 16px;
+  --type-body-weight: 400;
+  --type-body-leading: 1.7;
+  --type-lead-size: 1.125rem;
+  --type-lead-weight: 400;
+  --type-lead-leading: 1.7;
+  --type-table-size: 1rem;
+  --type-table-weight: 400;
+  --type-table-leading: 1.7;
+  --type-navbar-link-size: 1rem;
+  --type-navbar-link-weight: 500;
+  --type-navbar-link-leading: 1.7;
+  --type-menu-size: 0.95rem;
+  --type-menu-weight: 400;
+  --type-menu-leading: 1.7;
+  --type-menu-section-size: 0.95rem;
+  --type-menu-section-weight: 600;
+  --type-menu-section-leading: 1.7;
+  --type-toc-size: 0.875rem;
+  --type-toc-weight: 400;
+  --type-toc-leading: 1.7;
+  --type-footer-size: 0.875rem;
+  --type-footer-weight: 400;
+  --type-footer-leading: 1.7;
+  --type-pagination-label-size: 1rem;
+  --type-pagination-label-weight: 500;
+  --type-pagination-label-leading: 1.7;
+  --type-code-size: 90%;
+  --type-code-weight: 400;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ifm-color-primary: #54cbc4;
+  --ifm-color-primary-dark: #00aba5;
+  --ifm-color-primary-darker: #007f7b;
+  --ifm-color-primary-darkest: #006d69;
+  --ifm-color-primary-light: #77d8d2;
+  --ifm-color-primary-lighter: #8dbfbe;
+  --ifm-color-primary-lightest: #dff7f5;
+  --ifm-background-color: #0b1e2d;
+  --ifm-background-surface-color: #021832;
+  --ifm-font-color-base: #e3e9ea;
+  --ifm-color-content-secondary: #9ca9bd;
+  --ifm-color-emphasis-200: #344157;
+  --ifm-navbar-background-color: #001126;
+  --ifm-navbar-link-hover-color: #77d8d2;
+  --ifm-menu-color: #9ca9bd;
+  --ifm-menu-color-active: #77d8d2;
+  --ifm-menu-color-background-active: rgba(84, 203, 196, 0.1);
+  --ifm-link-color: #54cbc4;
+  --ifm-link-hover-color: #77d8d2;
+  --ifm-code-background: #183344;
+  --ifm-toc-border-color: #344157;
+  --docusaurus-highlighted-code-line-bg: rgba(84, 203, 196, 0.12);
+  --search-local-modal-background: #021832;
+  --search-local-highlight-color: #77d8d2;
+  --search-local-hit-background: #0b1e2d;
+  --search-local-hit-color: #e3e9ea;
+  --search-local-muted-color: #9ca9bd;
+  --search-local-hit-active-color: #021832;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ifm-color-primary: #54cbc4;
+    --ifm-color-primary-dark: #00aba5;
+    --ifm-color-primary-darker: #007f7b;
+    --ifm-color-primary-darkest: #006d69;
+    --ifm-color-primary-light: #77d8d2;
+    --ifm-color-primary-lighter: #8dbfbe;
+    --ifm-color-primary-lightest: #dff7f5;
+    --ifm-background-color: #0b1e2d;
+    --ifm-background-surface-color: #021832;
+    --ifm-font-color-base: #e3e9ea;
+    --ifm-color-content-secondary: #9ca9bd;
+    --ifm-color-emphasis-200: #344157;
+    --ifm-navbar-background-color: #001126;
+    --ifm-navbar-link-hover-color: #77d8d2;
+    --ifm-menu-color: #9ca9bd;
+    --ifm-menu-color-active: #77d8d2;
+    --ifm-menu-color-background-active: rgba(84, 203, 196, 0.1);
+    --ifm-link-color: #54cbc4;
+    --ifm-link-hover-color: #77d8d2;
+    --ifm-code-background: #183344;
+    --ifm-toc-border-color: #344157;
+    --docusaurus-highlighted-code-line-bg: rgba(84, 203, 196, 0.12);
+    --search-local-modal-background: #021832;
+    --search-local-highlight-color: #77d8d2;
+    --search-local-hit-background: #0b1e2d;
+    --search-local-hit-color: #e3e9ea;
+    --search-local-muted-color: #9ca9bd;
+    --search-local-hit-active-color: #021832;
+  }
+}
+
+/* Dashboard components for the Data Science design system. Hand-written, and the only hand-written
+   CSS in the package: every color, radius and shadow here is a var(--token) from theme/tokens.css
+   (scripts/check_theme.py refuses a literal). Lengths the system does not tokenize (page width,
+   gutters, card padding) are plain values. The build inlines tokens.css + this file into every
+   template between the @ds-theme markers, so a page stays a single file with no build step.
+
+   The look: a navy masthead and hero in both themes, teal rules as the only accent, big Georgia
+   figures, monospace for labels, ids and commands. Square corners, no gradients, no shadows, no
+   motion; hover changes color only. */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--ifm-background-color); }
+body {
+  margin: 0;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-family: var(--font-base);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-leading);
+}
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
+
+/* Masthead: the navbar's navy in both themes. With a .hero after it, the two read as one navy
+   block and the teal rule moves under the hero. */
+.masthead {
+  background: var(--ifm-navbar-background-color);
+  color: var(--ifm-navbar-link-color);
+  border-bottom: var(--rule-width) solid var(--ifm-color-primary);
+  box-shadow: var(--ifm-navbar-shadow);
+}
+.masthead:has(+ .hero) { border-bottom: 0; }
+.masthead .wrap {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: var(--space-brand-gap);
+  min-height: var(--ifm-navbar-height);
+  padding-top: 12px; padding-bottom: 12px;
+}
+.masthead .mark { display: block; width: var(--navbar-logo-size); height: var(--navbar-logo-size); }
+.masthead h1, .masthead .brand {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--type-navbar-title-size);
+  font-weight: var(--type-navbar-title-weight);
+  letter-spacing: var(--type-navbar-title-tracking);
+  line-height: 1.2;
+  color: var(--ifm-navbar-link-color);
+  text-decoration: none;
+}
+.masthead .crumb { font-family: var(--font-monospace); font-size: var(--type-toc-size); color: var(--ifm-navbar-search-input-placeholder-color); }
+.masthead .refreshed {
+  display: flex; align-items: center; gap: 8px;
+  margin: 0 0 0 auto;
+  font-family: var(--font-monospace); font-size: var(--type-toc-size);
+  color: var(--ifm-navbar-link-color);
+}
+/* A square teal pip before the refresh time. It decorates; the words say Live or Manual. */
+.masthead .refreshed::before { content: ""; width: 8px; height: 8px; background: var(--ifm-navbar-search-input-placeholder-color); }
+.masthead .refreshed[data-live]::before { background: var(--ifm-color-primary); }
+/* Light/dark switch: a square outlined button on the navy; hover changes color only. */
+.theme-toggle {
+  padding: 4px 10px;
+  font-family: var(--font-monospace); font-size: var(--type-toc-size);
+  color: var(--ifm-navbar-link-color);
+  background: transparent;
+  border: 1px solid var(--ifm-navbar-search-input-placeholder-color);
+  border-radius: var(--ifm-global-radius);
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--ifm-navbar-link-hover-color); border-color: var(--ifm-navbar-link-hover-color); }
+.masthead a { color: var(--ifm-navbar-link-color); }
+.masthead a:hover, .masthead a.brand:hover { color: var(--ifm-navbar-link-hover-color); }
+.masthead :focus-visible, .hero :focus-visible { outline: var(--focus-ring-width) solid var(--ifm-navbar-link-hover-color); outline-offset: var(--focus-ring-offset); }
+
+/* Hero: the page title at full h1 size on navy, a lead, and an optional row of figures. */
+.hero {
+  background: var(--ifm-navbar-background-color);
+  color: var(--ifm-navbar-link-color);
+  border-bottom: calc(var(--rule-width) * 2) solid var(--ifm-color-primary);
+}
+.hero .wrap { padding-top: 40px; padding-bottom: 40px; }
+.hero .eyebrow {
+  margin: 0 0 10px;
+  font-family: var(--font-monospace); font-size: var(--type-toc-size);
+  color: var(--ifm-navbar-link-hover-color);
+}
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(var(--type-h1-compact-size), var(--h1-fluid-size), var(--type-h1-size));
+  font-weight: var(--type-h1-weight); letter-spacing: var(--type-h1-tracking);
+  line-height: 1.05;
+}
+.hero .lead { margin: 14px 0 0; max-width: 46em; color: var(--ifm-navbar-search-input-placeholder-color); }
+.hero .lead a { color: var(--ifm-navbar-link-hover-color); }
+.stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  margin: 32px 0 0; padding: 0;
+  border-top: 1px solid var(--ifm-color-primary-darkest);
+}
+.stats > div { padding: 18px 20px 0 0; }
+.stats > div + div { padding-left: 20px; border-left: 1px solid var(--ifm-color-primary-darkest); }
+.stats dt { font-family: var(--font-monospace); font-size: var(--type-toc-size); color: var(--ifm-navbar-search-input-placeholder-color); }
+.stats dd {
+  margin: 4px 0 0;
+  font-family: var(--font-heading);
+  font-size: var(--type-h1-compact-size); font-weight: var(--type-h1-weight); letter-spacing: var(--type-h1-tracking);
+  line-height: 1.1;
+  color: var(--ifm-navbar-link-color);
+}
+.stats dd small { display: block; margin-top: 4px; font-family: var(--font-base); font-size: var(--type-toc-size); letter-spacing: 0; color: var(--ifm-navbar-search-input-placeholder-color); }
+
+/* Prose */
+main.wrap { padding-top: 8px; padding-bottom: 72px; }
+h2 {
+  display: flex; align-items: baseline; gap: 14px;
+  margin: 56px 0 18px;
+  font-family: var(--font-heading);
+  font-size: var(--type-h2-size); font-weight: var(--type-h2-weight); letter-spacing: var(--type-h2-tracking);
+  line-height: 1.25;
+}
+/* Section index in mono before the heading, a hairline running out after it. */
+h2 .idx { font-family: var(--font-monospace); font-size: var(--type-toc-size); font-weight: 600; letter-spacing: 0; color: var(--ifm-link-color); }
+h2::after { content: ""; flex: 1; align-self: center; border-top: 1px solid var(--ifm-color-emphasis-200); }
+h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--type-h3-size); font-weight: var(--type-h3-weight); letter-spacing: var(--type-h3-tracking);
+  line-height: 1.3;
+}
+p { margin: 0 0 1rem; }
+.lead { color: var(--ifm-color-content-secondary); font-size: var(--type-lead-size); }
+a { color: var(--ifm-link-color); text-underline-offset: var(--underline-offset-prose); }
+a:hover { color: var(--ifm-link-hover-color); }
+:focus-visible { outline: var(--focus-ring-width) solid var(--ifm-link-color); outline-offset: var(--focus-ring-offset); }
+code {
+  font-family: var(--font-monospace); font-size: var(--type-code-size);
+  padding: 0.1rem 0.3rem;
+  background: var(--ifm-code-background);
+  border-radius: var(--ifm-code-border-radius);
+}
+
+/* Command blocks: a navy terminal in both themes, a teal rule on the left, comments stepped back. */
+pre {
+  margin: 0 0 1rem; padding: 16px 18px; overflow-x: auto;
+  font-family: var(--font-monospace); font-size: var(--type-code-size); line-height: 1.65;
+  background: var(--ifm-navbar-background-color);
+  color: var(--ifm-navbar-link-color);
+  border-left: calc(var(--rule-width) * 2) solid var(--ifm-color-primary);
+  border-radius: var(--ifm-code-border-radius);
+}
+pre code { padding: 0; background: none; color: inherit; }
+pre .c { color: var(--ifm-navbar-search-input-placeholder-color); }
+
+/* Most urgent first: the banner sits above everything and names what needs action.
+   Navy in both themes, a thick teal rule on the left, the label in mono. */
+.banner {
+  display: flex; gap: 16px; align-items: baseline;
+  margin: 28px 0 0; padding: 16px 20px;
+  background: var(--ifm-navbar-background-color);
+  color: var(--ifm-navbar-link-color);
+  border-left: calc(var(--rule-width) * 3) solid var(--ifm-color-primary);
+}
+.banner[hidden] { display: none; }
+.banner::before {
+  content: attr(data-label);
+  flex: none;
+  font-family: var(--font-monospace); font-size: var(--type-toc-size); font-weight: 600;
+  color: var(--ifm-navbar-link-hover-color);
+}
+.banner:not([data-label])::before { content: "Action"; }
+.banner a, .banner code { color: var(--ifm-navbar-link-hover-color); }
+.banner code { background: var(--ifm-navbar-search-input-background-color); }
+.banner + .banner { margin-top: 8px; }
+
+/* At a glance: figure cards, each with a teal rule on top. */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 0 0 1rem; }
+.card {
+  padding: 20px 22px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-card-border-radius);
+}
+.card > :first-child { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+main > .card + .card { margin-top: 16px; }
+.grid > .card { border-top: var(--rule-width) solid var(--ifm-color-primary); }
+.card .label { font-family: var(--font-monospace); font-size: var(--type-toc-size); color: var(--ifm-color-content-secondary); }
+.card .value {
+  margin: 6px 0 2px;
+  font-family: var(--font-heading);
+  font-size: var(--type-h1-compact-size); font-weight: var(--type-h1-weight); letter-spacing: var(--type-h1-tracking);
+  line-height: 1.1;
+}
+.card .sub { font-size: var(--type-toc-size); color: var(--ifm-color-content-secondary); }
+.card .sub.status { color: var(--ifm-link-color); }
+
+/* A meter: a teal fill on a hairline track. The number beside it carries the meaning. */
+.meter { height: 6px; margin: 12px 0 8px; background: var(--ifm-color-emphasis-200); }
+.meter > span { display: block; height: 100%; width: 0; background: var(--ifm-color-primary); }
+.meter[hidden] { display: none; }
+
+/* Detail tables: a navy header row, hairlines between rows only; scroll sideways when narrow. */
+.table-scroll { overflow-x: auto; margin: 0 0 1rem; border: 1px solid var(--ifm-color-emphasis-200); }
+table { width: 100%; border-collapse: collapse; background: var(--ifm-background-surface-color); font-size: var(--type-table-size); }
+th, td { text-align: left; padding: 0.7rem 1rem; border-bottom: 1px solid var(--ifm-color-emphasis-200); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th {
+  font-family: var(--font-monospace); font-size: var(--type-toc-size); font-weight: 600;
+  background: var(--ifm-navbar-background-color); color: var(--ifm-navbar-link-color);
+  border-bottom: var(--rule-width) solid var(--ifm-color-primary);
+}
+tbody tr:hover td, table tr:hover td { background: var(--ifm-menu-color-background-active); }
+td code { white-space: nowrap; }
+
+/* Status is words. .status gives emphasis in the text-safe accent; .muted steps back.
+   .pill sets the words in a square chip: teal for attention, .quiet for things on hold. */
+.status { color: var(--ifm-link-color); font-weight: 600; }
+.muted { color: var(--ifm-color-content-secondary); }
+.pill {
+  display: inline-block; padding: 2px 8px;
+  font-size: var(--type-toc-size); font-weight: 600; line-height: 1.5;
+  background: var(--ifm-menu-color-background-active); color: var(--ifm-menu-color-active);
+  border-left: var(--rule-width) solid var(--ifm-color-primary);
+  border-radius: var(--ifm-global-radius);
+}
+.pill.quiet { background: var(--ifm-code-background); color: var(--ifm-color-content-secondary); border-left-color: var(--ifm-color-content-secondary); }
+
+/* A list of files or links with a note each. */
+.filelist {
+  list-style: none; margin: 0 0 1rem; padding: 0;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+.filelist li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  border-left: var(--rule-width) solid transparent;
+}
+.filelist li:hover { border-left-color: var(--ifm-color-primary); background: var(--ifm-menu-color-background-active); }
+.filelist li:last-child { border-bottom: 0; }
+.filelist .desc { color: var(--ifm-color-content-secondary); font-size: var(--type-toc-size); text-align: right; }
+
+/* Hub tiles: each tile is one link. A mono index top left, data-freshness as a chip top right,
+   a teal rule along the top that turns light teal on hover. */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 16px; }
+.tile {
+  position: relative;
+  display: flex; flex-direction: column; gap: 8px;
+  min-height: 210px;
+  padding: 22px 24px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-top: calc(var(--rule-width) * 2) solid var(--ifm-color-primary);
+  border-radius: var(--ifm-card-border-radius);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+.tile:hover { border-top-color: var(--ifm-color-primary-lighter); background: var(--ifm-menu-color-background-active); }
+.tile .idx { font-family: var(--font-monospace); font-size: var(--type-toc-size); color: var(--ifm-color-content-secondary); }
+.tile .title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2-size); font-weight: var(--type-h2-weight); letter-spacing: var(--type-h2-tracking);
+  line-height: 1.15;
+  color: var(--ifm-font-color-base);
+}
+.tile:hover .title { color: var(--ifm-link-color); text-decoration: underline; text-underline-offset: var(--underline-offset-prose); }
+.tile .desc { color: var(--ifm-color-content-secondary); font-size: var(--type-toc-size); }
+.tile .meta {
+  margin-top: auto; padding-top: 12px;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  font-family: var(--font-monospace); font-size: var(--type-toc-size); color: var(--ifm-color-content-secondary);
+}
+.tile .meta code { padding: 0; background: none; font-size: inherit; }
+.tile[data-freshness]::after {
+  content: attr(data-freshness);
+  position: absolute; top: 22px; right: 24px;
+  padding: 1px 8px;
+  font-size: var(--type-toc-size); font-weight: 600;
+  background: var(--ifm-code-background); color: var(--ifm-color-content-secondary);
+}
+.tile[data-freshness="Live"]::after { background: var(--ifm-menu-color-background-active); color: var(--ifm-menu-color-active); border-left: var(--rule-width) solid var(--ifm-color-primary); }
+/* data-state drives the chip when a page knows more than Live/Manual: ok reads teal like Live,
+   fail inverts to navy so it stands out without a new color; the chip's words carry the meaning. */
+.tile[data-state="ok"]::after { background: var(--ifm-menu-color-background-active); color: var(--ifm-menu-color-active); border-left: var(--rule-width) solid var(--ifm-color-primary); }
+.tile[data-state="fail"]::after { background: var(--ifm-navbar-background-color); color: var(--ifm-navbar-link-color); border-left: var(--rule-width) solid var(--ifm-color-primary); }
+.tile[data-state="fail"] { border-top-color: var(--ifm-navbar-background-color); }
+.tile[data-state="draft"] { border-top-style: dashed; }
+.tile .desc strong { color: var(--ifm-font-color-base); font-weight: 600; }
+
+/* Footer: the dark navy in both themes. */
+footer.site {
+  margin-top: 48px; padding: var(--space-footer) 0;
+  background: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-color);
+  font-size: var(--type-footer-size);
+  border-top: var(--rule-width) solid var(--ifm-color-primary);
+}
+footer.site a { color: var(--ifm-footer-link-color); }
+footer.site a:hover { color: var(--ifm-footer-link-hover-color); }
+footer.site code { background: var(--ifm-navbar-search-input-background-color); color: var(--ifm-footer-color); }
+
+/* breakpoint-mobile (996px): the one literal, because a media query cannot read a custom property. */
+@media (max-width: 996px) {
+  .wrap { padding-left: 16px; padding-right: 16px; }
+  .masthead h1, .masthead .brand { font-size: var(--type-navbar-title-compact-size); }
+  .hero .wrap { padding-top: 28px; padding-bottom: 28px; }
+  .stats > div + div { padding-left: 0; border-left: 0; }
+  .banner { flex-direction: column; gap: 4px; }
+}
+/* @ds-theme end */
+.wrap { max-width: 1380px; }
+.hero .wrap { display:grid; grid-template-columns:1.2fr 1fr; align-items:center; gap:40px; padding-top:24px; padding-bottom:24px; }
+.hero .stats { margin:0; grid-template-columns:repeat(3,minmax(0,1fr)); }
+.banner { margin-top:18px; }
+.mode-line { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; margin:18px 0; font-size:var(--type-toc-size); color:var(--ifm-color-content-secondary); }
+#feedback { color:var(--ifm-link-color); }
+.tabs { display:flex; flex-wrap:wrap; align-items:center; gap:8px 22px; border-bottom:1px solid var(--ifm-color-emphasis-200); padding:0 0 14px; margin:20px 0; }
+button, input, select, textarea { font-family:var(--font-base); font-size:var(--type-body-size); color:var(--ifm-font-color-base); border:1px solid var(--ifm-color-content-secondary); border-radius:var(--ifm-global-radius); background:var(--ifm-background-surface-color); padding:10px 12px; max-width:100%; }
+button { cursor:pointer; }
+button:hover { color:var(--ifm-link-color); border-color:var(--ifm-link-color); }
+button:disabled { color:var(--ifm-color-content-secondary); cursor:not-allowed; }
+.tabs button { border:0; border-bottom:var(--rule-width) solid transparent; background:var(--ifm-background-color); padding:8px 0; }
+.tabs button[aria-current="page"] { border-color:var(--ifm-color-primary); color:var(--ifm-link-color); }
+label { display:flex; flex-direction:column; gap:6px; font-size:var(--type-toc-size); font-weight:500; min-width:0; }
+.tools { display:flex; flex-wrap:wrap; gap:20px; margin:24px 0 16px; align-items:end; }
+.search { flex:1; min-width:220px; }
+.workspace { display:grid; grid-template-columns: minmax(260px, .85fr) minmax(0, 1.8fr); gap:28px; align-items:start; }
+.record-list { display:grid; gap:12px; }
+.record { display:flex; flex-direction:column; gap:10px; width:100%; text-align:left; padding:18px; border:1px solid var(--ifm-color-emphasis-200); border-left:var(--rule-width) solid var(--ifm-color-emphasis-200); font-size:var(--type-toc-size); }
+.record.selected { border-left:calc(var(--rule-width) * 3) solid var(--ifm-color-primary); background:var(--ifm-menu-color-background-active); }
+.record-top { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; align-items:center; }
+.record-title { font-family:var(--font-heading); font-size:var(--type-h3-size); font-weight:var(--type-h3-weight); }
+#detail { margin-top:41px; min-width:0; overflow-wrap:anywhere; }
+#detail .detail-title { margin:20px 0 16px; }
+#detail .detail-title::after { display:none; }
+.reason { border-left:var(--rule-width) solid var(--ifm-color-primary); padding:10px 16px; background:var(--ifm-background-color); margin:20px 0; }
+.reason p { margin:6px 0 0; }
+.chain { padding:0; list-style:none; counter-reset:chain; }
+.chain li { display:grid; grid-template-columns:150px minmax(0,1fr); gap:12px; border-bottom:1px solid var(--ifm-color-emphasis-200); padding:10px 0; }
+.chain li span { color:var(--ifm-color-content-secondary); font-size:var(--type-toc-size); }
+.chain code { overflow-wrap:anywhere; }
+.locations { padding-left:20px; }
+.locations li { margin-bottom:12px; overflow-wrap:anywhere; }
+.connections { list-style:none; padding:0; }
+.connections li { display:flex; flex-wrap:wrap; gap:10px; border-bottom:1px solid var(--ifm-color-emphasis-200); padding:10px 0; }
+.text-button { padding:0; border:0; font-size:var(--type-toc-size); color:var(--ifm-link-color); text-decoration:underline; background:var(--ifm-background-surface-color); }
+.evidence { padding:14px 0; border-bottom:1px solid var(--ifm-color-emphasis-200); }
+.evidence p { margin:5px 0; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin:22px 0; }
+.open-questions { border:1px solid var(--ifm-color-content-secondary); padding:16px; }
+details { border-top:1px solid var(--ifm-color-emphasis-200); padding:16px 0; }
+summary { cursor:pointer; color:var(--ifm-link-color); }
+form label { margin:12px 0; }
+form button { margin:10px 0; }
+.inline-form { display:flex; flex-wrap:wrap; gap:12px; align-items:end; }
+.capture-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px 24px; }
+.wide { grid-column:1 / -1; }
+textarea { min-height:100px; resize:vertical; }
+dialog { width:min(850px, 95vw); max-height:90vh; overflow:auto; background:var(--ifm-background-color); color:var(--ifm-font-color-base); border:var(--rule-width) solid var(--ifm-color-primary); padding:24px; }
+dialog h2 { margin-top:0; }
+#edit-json { min-height:350px; font-family:var(--font-monospace); font-size:var(--type-toc-size); }
+[hidden] { display:none !important; }
+@media (max-width:996px) { .hero .wrap { grid-template-columns:1fr; gap:20px; } .workspace { grid-template-columns:1fr; } #detail { margin-top:0; } .record-list { grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); } .chain li { grid-template-columns:1fr; gap:4px; } .capture-grid { grid-template-columns:1fr; } }
+
+</style>
+</head>
+<body>
+<header class="masthead"><div class="wrap"><!-- @ds-mark start -->
+<img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%20viewBox=%220%200%2040%2040%22%3E%20%3Ctitle%3EData%20Science%3C/title%3E%20%3Crect%20width=%2240%22%20height=%2240%22%20fill=%22%2300aba5%22/%3E%20%3Ctext%20x=%2220%22%20y=%2227%22%20text-anchor=%22middle%22%20font-family=%22Georgia,serif%22%20font-size=%2222%22%20fill=%22%23021832%22%3Eds%3C/text%3E%20%3C/svg%3E" alt="" width="34" height="34">
+<!-- @ds-mark end --><span class="brand">Where</span><span class="crumb">/ your operational map</span><p class="refreshed" id="refreshed">Manual evidence</p><button class="theme-toggle" id="theme">Change theme</button></div></header>
+<section class="hero"><div class="wrap"><div class="hero-intro"><p class="eyebrow">A place to return to</p><h1>What runs where?</h1><p class="lead">The answer you untangled yesterday, ready for you today. Sources stay where they belong.</p></div><dl class="stats"><div><dt>Curated answers</dt><dd id="curated">0</dd></div><div><dt>Need a fresh look</dt><dd id="stale">0</dd></div><div><dt>In the inbox</dt><dd id="drafts">0</dd></div></dl></div></section>
+<main class="wrap">
+<div class="banner" data-label="Sample" id="sample-banner">Fictional infrastructure and evidence. These records do not describe your live servers.</div>
+<div class="mode-line"><span id="mode">Read-only file view. Start the local server to save changes.</span><span id="feedback" role="status" aria-live="polite"></span></div>
+<nav class="tabs" aria-label="Map sections"><button data-tab="map" aria-current="page">Daily map</button><button data-tab="capture">Capture an answer</button><button data-tab="guide">The workflow</button><a href="START.md">Markdown index</a><a href="obsidian/Where.md">Obsidian index</a></nav>
+<section id="tab-map">
+<div class="tools"><label class="search">Find a website, folder, server, or reason<input type="search" id="search" placeholder="Try Harbor, web-01, or the old folder"></label><label>Show<select id="filter"><option value="all">All records</option><option value="attention">Needs attention</option><option value="Current">Current knowledge</option><option value="Draft">Drafts</option><option value="Stale">Stale evidence</option><option value="Retired">Retired</option></select></label></div>
+<div class="workspace"><aside aria-label="Records"><p class="muted" id="result-count"></p><div id="records" class="record-list"></div></aside><article id="detail" class="card" aria-label="Selected record"></article></div>
+</section>
+<section id="tab-capture" hidden>
+<h2>Save the answer, keep the source</h2><p class="lead">A quick capture lands in the inbox. Add evidence when you have it; curate it when the answer holds up.</p>
+<form id="capture-form" class="card capture-grid"><label>What is it?<input name="title" required placeholder="Customer website"></label><label>Kind<select name="kind"><option value="service">Running service</option><option value="repository">Repository</option><option value="host">Server / host</option><option value="document">Document / decision</option></select></label><label class="wide">The condensed answer<textarea name="summary" required placeholder="The public site is built from apps/web in the main repository."></textarea></label><label class="wide">Why it exists / why it was confusing<textarea name="why" required placeholder="The old folder is an archive; its name made it look active."></textarea></label><label>Curator<input name="owner" required placeholder="Your name"></label><label>Primary source or location URI<input name="uri" type="url" required placeholder="https://… or file:///…"></label><label class="wide">What still needs checking? One question per line<textarea name="uncertainties" placeholder="Confirm the live route points at this deployment."></textarea></label><div class="wide actions"><button type="submit" data-save disabled>Save draft</button><span class="muted">Nothing is promoted or moved by capture.</span></div></form>
+</section>
+<section id="tab-guide" hidden>
+<h2>A repeatable way to untangle things</h2><div class="grid"><div class="card"><p class="label">01 / Untangle</p><h3>Follow the real route</h3><p>Address → host → deployment → repository and folder → runtime. Record what proves each link.</p></div><div class="card"><p class="label">02 / Distill</p><h3>Capture the useful answer</h3><p>Save the conclusion, why it matters, source pointers, and remaining questions. The original code and notes stay put.</p></div><div class="card"><p class="label">03 / Curate</p><h3>Promote with evidence</h3><p>Resolve the gaps and accept the finding into the map. Promotion changes knowledge state; it does not deploy anything.</p></div><div class="card"><p class="label">04 / Return</p><h3>Check the daily map</h3><p>See stale evidence and drafts first. Follow connections. When a path changes, retain its old location in history.</p></div></div>
+<h2>One source, several views</h2><div class="card"><p><code>registry.json</code> holds the facts and pointers. This page, <code>START.md</code>, and the linked <code>obsidian/</code> notes are generated from it.</p><p>The local server saves to disk. Opening this HTML by itself is a read-only view. Obsidian notes link by stable ids and include incoming relationships.</p><p>“Current” means within the record’s evidence review window. It is not a live uptime check. Rebuilding this page never refreshes evidence.</p><a href="DESIGN.md">Read the design and boundaries</a></div>
+</section>
+</main>
+<footer class="site"><div class="wrap">Where · Manual evidence, explicit unknowns, original sources. Generated from <a href="registry.json">registry.json</a>. <span id="revision"></span></div></footer>
+<dialog id="edit-dialog"><form id="edit-form"><h2>Amend the record</h2><p>Keep its id. The previous snapshot stays in history; the amended record returns to draft.</p><label>Reason<input id="edit-reason" required></label><label>Record JSON<textarea id="edit-json" required spellcheck="false"></textarea></label><div class="actions"><button type="submit">Save amendment</button><button type="button" id="cancel-edit">Cancel</button></div><p id="edit-error" role="alert"></p></form></dialog>
+<script type="application/json" id="where-data">__WHERE_DATA__</script>
+<script>
+let data = JSON.parse(document.getElementById('where-data').textContent);
+let selected = data.records.find(r=>r.kind==='service' && r.state==='curated')?.id || data.records[0]?.id;
+let token = null;
+const $ = s=>document.querySelector(s);
+const esc = v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const state = r=>r.state==='curated' ? (Date.now()>Date.parse(r.verified_at)+r.review_after_days*86400000?'Stale':'Current') : r.state[0].toUpperCase()+r.state.slice(1);
+const title = id=>data.records.find(r=>r.id===id)?.title || id;
+function safeLink(uri) { try { const u=new URL(uri,location.href); if(['http:','https:','file:','obsidian:','ssh:'].includes(u.protocol)) return esc(u.href); } catch{} return ''; }
+function locationText(uri) { const href=safeLink(uri); return href?`<a href="${href}">${esc(uri)}</a>`:esc(uri); }
+function message(s) { $('#feedback').textContent=s; }
+function showTab(tab) { for(const id of ['map','capture','guide']) $('#tab-'+id).hidden=id!==tab; document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-current',b.dataset.tab===tab?'page':'false')); }
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+$('#search').oninput=render;
+$('#filter').onchange=render;
+$('#theme').onclick=()=>{const dark=document.documentElement.dataset.theme==='dark'||(!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'light':'dark';};
+function render() {
+  const counts=s=>data.records.filter(r=>state(r)===s).length;
+  $('#curated').textContent=data.records.filter(r=>r.state==='curated').length;
+  $('#stale').textContent=counts('Stale'); $('#drafts').textContent=counts('Draft');
+  $('#refreshed').textContent='Manual evidence · '+new Date().toLocaleDateString(undefined,{month:'short',day:'numeric'});
+  $('#sample-banner').hidden=!data.demo;
+  $('#revision').textContent='Revision '+data.revision;
+  const terms=$('#search').value.toLowerCase().split(/\s+/).filter(Boolean), filter=$('#filter').value;
+  const rows=data.records.filter(r=>terms.every(term=>JSON.stringify(r).toLowerCase().includes(term))).filter(r=>filter==='all'||(filter==='attention'?['Stale','Draft'].includes(state(r)):state(r)===filter)).sort((a,b)=>({Stale:0,Draft:1,Current:2,Retired:3}[state(a)]-{Stale:0,Draft:1,Current:2,Retired:3}[state(b)]));
+  $('#result-count').textContent=rows.length+' of '+data.records.length+' records';
+  $('#records').innerHTML=rows.length?rows.map(r=>`<button class="record ${r.id===selected?'selected':''}" data-id="${r.id}" aria-pressed="${r.id===selected}"><span class="record-top"><code>${r.id}</code><span class="pill quiet">${state(r)}</span></span><span class="record-title">${esc(r.title)}</span><span>${esc(r.summary)}</span><span class="muted">${esc(r.kind)} · ${esc(r.owner)}</span></button>`).join(''):'<p class="card">No matches. Change the search or filter.</p>';
+  $('#records').querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>{selected=b.dataset.id;render();});
+  renderDetail();
+  document.querySelectorAll('[data-save]').forEach(b=>b.disabled=!token);
+}
+function renderDetail() {
+  const r=data.records.find(r=>r.id===selected);
+  if(!r){$('#detail').innerHTML='<h2>Start with one answer</h2><p>Capture the thing you just untangled.</p>';return;}
+  const runtime=r.runtime, service=r.kind==='service';
+  const incoming=data.records.flatMap(s=>s.relations.filter(rel=>rel.to===r.id).map(rel=>({to:s.id,type:'Incoming '+rel.type})));
+  const rels=[...r.relations,...incoming];
+  $('#detail').innerHTML=`<div class="record-top"><span class="label">${esc(r.kind)} / ${r.id}</span><span class="pill">${state(r)} knowledge</span></div><h2 class="detail-title">${esc(r.title)}</h2><p class="lead">${esc(r.summary)}</p><div class="reason"><strong>Why this matters</strong><p>${esc(r.why)}</p></div><p class="muted">Curator: ${esc(r.owner)} · Evidence: ${r.verified_at?esc(new Date(r.verified_at).toLocaleString()):'Not verified'} · Review every ${r.review_after_days} days</p>
+  ${r.uncertainties.length?`<div class="open-questions"><strong>Still to untangle</strong><ul>${r.uncertainties.map(q=>`<li>${esc(q)}</li>`).join('')}</ul></div>`:''}
+  ${service?`<h3>The serving chain</h3><ol class="chain">${[['Address',runtime.address],['Host / platform',runtime.host],['Deployment',runtime.deployment],['Built from',runtime.repo],['Folder in repository',runtime.subdirectory],['Revision',runtime.revision],['Runtime root',runtime.root],['Starts with',runtime.entrypoint],['Environment',runtime.environment]].map(([k,v])=>`<li><span>${k}</span><code>${esc(v||'Unknown — needs investigation')}</code></li>`).join('')}</ol>`:''}
+  <h3>Locations</h3><ul class="locations">${r.locations.map(l=>`<li><strong>${esc(l.label)}</strong><br>${locationText(l.uri)}</li>`).join('')||'<li>Not yet located</li>'}</ul>
+  <h3>Connections</h3><ul class="connections">${rels.map(rel=>`<li><span class="muted">${esc(rel.type.replaceAll('_',' '))}</span><button class="text-button" data-related="${rel.to}">${esc(title(rel.to))} <code>${rel.to}</code></button></li>`).join('')||'<li>No connections yet</li>'}</ul>
+  <h3>What supports this answer</h3>${r.evidence.map(e=>`<div class="evidence"><span class="label">${esc(e.scope)} · ${esc(e.observed_at)}${e.sample?' · Sample':''}</span><p>${esc(e.summary)}</p><a href="${safeLink(e.ref)}">Read original evidence</a></div>`).join('')||'<p class="muted">No evidence captured yet. This answer stays in draft.</p>'}
+  <div class="actions"><button id="promote" data-save ${r.state!=='draft'?'hidden':''}>Promote to curated</button><button id="amend" data-save>Amend record</button><a href="obsidian/${r.id}.md">Linked Markdown</a></div>
+  <details><summary>Connect another record</summary><form id="link-form" class="inline-form"><label>Relationship<select name="type">${['runs_on','built_from','documents','depends_on','related_to','supersedes'].map(t=>`<option>${t}</option>`).join('')}</select></label><label>Record<select name="to">${data.records.filter(s=>s.id!==r.id).map(s=>`<option value="${s.id}">${esc(s.title)}</option>`).join('')}</select></label><button data-save>Add connection</button></form></details>
+  <details><summary>Update a location pointer</summary><p>This updates the map and keeps the old path in history. It does not move files. The record returns to draft for verification.</p><form id="relocate-form"><label>Old URI<select name="old">${r.locations.map(l=>`<option>${esc(l.uri)}</option>`).join('')}</select></label><label>New URI<input name="new" type="url" required></label><label>Reason<input name="reason" required></label><button data-save>Update reference</button></form></details>
+  <details><summary>History · ${r.history.length} changes</summary><pre>${esc(JSON.stringify(r.history,null,2))}</pre></details>`;
+  $('#detail').querySelectorAll('[data-related]').forEach(b=>b.onclick=()=>{selected=b.dataset.related;$('#search').value='';$('#filter').value='all';render();});
+  $('#promote').onclick=()=>save('promote',{id:r.id});
+  $('#amend').onclick=()=>{$('#edit-json').value=JSON.stringify(r,null,2);$('#edit-reason').value='';$('#edit-error').textContent='';$('#edit-dialog').showModal();};
+  $('#link-form').onsubmit=e=>{e.preventDefault();save('link',{id:r.id,...Object.fromEntries(new FormData(e.target))});};
+  $('#relocate-form').onsubmit=e=>{e.preventDefault();save('relocate',{id:r.id,...Object.fromEntries(new FormData(e.target))});};
+}
+async function save(action,payload) {
+  if(!token) { message('Start the local server to save changes.'); return false; }
+  try { const res=await fetch('/api/'+action,{method:'POST',headers:{'Content-Type':'application/json','X-Where-Token':token},body:JSON.stringify({...payload,expected_revision:data.revision})}); const result=await res.json(); if(!res.ok) throw new Error(result.error);data=result.registry;selected=result.id;render();message('Saved to registry.json · revision '+data.revision);return true; } catch(e){message(e.message);return false;}
+}
+$('#capture-form').onsubmit=async e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));const record={title:f.title,kind:f.kind,summary:f.summary,why:f.why,owner:f.owner,locations:[{label:'Primary source',uri:f.uri}],uncertainties:f.uncertainties.split('\n').map(s=>s.trim()).filter(Boolean)};if(await save('capture',{record})){e.target.reset();$('#search').value='';$('#filter').value='all';showTab('map');render();}};
+$('#cancel-edit').onclick=()=>$('#edit-dialog').close();
+$('#edit-form').onsubmit=async e=>{e.preventDefault();try{const record=JSON.parse($('#edit-json').value);if(await save('amend',{id:selected,record,reason:$('#edit-reason').value}))$('#edit-dialog').close();else $('#edit-error').textContent=$('#feedback').textContent;}catch(err){$('#edit-error').textContent=err.message;}};
+render();
+if(location.protocol==='http:' && location.hostname==='127.0.0.1') fetch('/api/registry').then(r=>r.json()).then(result=>{if(!result.csrf)throw new Error('No editing session');data=result.registry;token=result.csrf;$('#mode').textContent='Local map · changes save to registry.json and rebuild the Markdown views.';render();}).catch(()=>message('Read-only view; local editing server is unavailable.'));
+</script>
+
+</body></html>

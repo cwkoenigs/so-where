@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "demo": true,
+  "revision": 0,
+  "records": [
+    {
+      "id": "k-a10001",
+      "title": "Harbor customer website",
+      "kind": "service",
+      "summary": "The public site comes from platform/apps/site, running as harbor-web on web-01.",
+      "why": "The folder named harbor-website is an old archive. Its name made it look like the active site.",
+      "owner": "Sample curator",
+      "state": "curated",
+      "locations": [
+        {
+          "label": "Public address",
+          "uri": "https://harbor.example.test"
+        },
+        {
+          "label": "Repository",
+          "uri": "https://git.example.test/harbor/platform"
+        },
+        {
+          "label": "Checkout on sample laptop",
+          "uri": "file:///workspace/harbor-platform/apps/site"
+        }
+      ],
+      "runtime": {
+        "address": "https://harbor.example.test",
+        "host": "web-01 / sample server",
+        "deployment": "release-2026-10-21-a7c91e2",
+        "repo": "https://git.example.test/harbor/platform",
+        "subdirectory": "apps/site",
+        "revision": "a7c91e2d4b6f830159caee847d2f810b3e64f907",
+        "root": "/srv/harbor/releases/a7c91e2/apps/site",
+        "entrypoint": "systemd harbor-web → node server.js",
+        "environment": "production (fictional)"
+      },
+      "tags": [
+        "harbor",
+        "website",
+        "production"
+      ],
+      "evidence": [
+        {
+          "scope": "route",
+          "observed_at": "2026-10-21T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#route",
+          "summary": "The sample proxy route points to harbor-web on port 4100.",
+          "sample": true,
+          "deployment": "release-2026-10-21-a7c91e2"
+        },
+        {
+          "scope": "source",
+          "observed_at": "2026-10-21T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#source",
+          "summary": "The deployed release metadata names platform/apps/site and revision a7c91e2.",
+          "sample": true,
+          "deployment": "release-2026-10-21-a7c91e2"
+        },
+        {
+          "scope": "runtime",
+          "observed_at": "2026-10-21T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#runtime",
+          "summary": "The sample systemd process uses the release root shown on this card.",
+          "sample": true,
+          "deployment": "release-2026-10-21-a7c91e2"
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": "2026-10-21T14:00:00+00:00",
+      "review_after_days": 14,
+      "relations": [
+        {
+          "type": "runs_on",
+          "to": "k-a10002"
+        },
+        {
+          "type": "built_from",
+          "to": "k-a10003"
+        }
+      ],
+      "history": []
+    },
+    {
+      "id": "k-a10002",
+      "title": "web-01",
+      "kind": "host",
+      "summary": "Runs the Harbor customer website and reverse proxy.",
+      "why": "This is the runtime host. A local developer checkout is not the code being executed here.",
+      "owner": "Sample curator",
+      "state": "curated",
+      "locations": [
+        {
+          "label": "Runtime directory",
+          "uri": "ssh://web-01.example.test/srv/harbor"
+        }
+      ],
+      "runtime": {},
+      "tags": [
+        "harbor",
+        "server"
+      ],
+      "evidence": [
+        {
+          "scope": "identity",
+          "observed_at": "2026-10-21T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#identity",
+          "summary": "The fictional service inventory identifies web-01 and its Harbor runtime.",
+          "sample": true
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": "2026-10-21T14:00:00+00:00",
+      "review_after_days": 14,
+      "relations": [],
+      "history": []
+    },
+    {
+      "id": "k-a10003",
+      "title": "Harbor platform repository",
+      "kind": "repository",
+      "summary": "The monorepo holds the current website in apps/site.",
+      "why": "The same repository can build production and preview releases. The deployment identifies which revision is live.",
+      "owner": "Sample curator",
+      "state": "curated",
+      "locations": [
+        {
+          "label": "Remote repository",
+          "uri": "https://git.example.test/harbor/platform"
+        },
+        {
+          "label": "Sample laptop checkout",
+          "uri": "file:///workspace/harbor-platform"
+        }
+      ],
+      "runtime": {},
+      "tags": [
+        "harbor",
+        "source"
+      ],
+      "evidence": [
+        {
+          "scope": "identity",
+          "observed_at": "2026-10-21T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#identity",
+          "summary": "The fictional repository tree contains apps/site and its runtime entrypoint.",
+          "sample": true
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": "2026-10-21T14:00:00+00:00",
+      "review_after_days": 14,
+      "relations": [],
+      "history": []
+    },
+    {
+      "id": "k-a10004",
+      "title": "Old harbor-website folder",
+      "kind": "repository",
+      "summary": "Historical prototype; it does not serve the public address.",
+      "why": "Keep the pointer so nobody starts the next investigation in the wrong folder.",
+      "owner": "Sample curator",
+      "state": "retired",
+      "locations": [
+        {
+          "label": "Archive checkout",
+          "uri": "file:///workspace/archive/harbor-website"
+        }
+      ],
+      "runtime": {},
+      "tags": [
+        "harbor",
+        "archive"
+      ],
+      "evidence": [
+        {
+          "scope": "identity",
+          "observed_at": "2026-10-21T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#identity",
+          "summary": "The fictional investigation shows this folder has no connection to the live route.",
+          "sample": true
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": null,
+      "review_after_days": 14,
+      "relations": [
+        {
+          "type": "related_to",
+          "to": "k-a10003"
+        }
+      ],
+      "history": []
+    },
+    {
+      "id": "k-a10005",
+      "title": "Why the website folder was misleading",
+      "kind": "document",
+      "summary": "A short investigation explains the archive, serving chain, and how to verify it next time.",
+      "why": "Retain the answer from a long troubleshooting session without relocating the source notes.",
+      "owner": "Sample curator",
+      "state": "draft",
+      "locations": [
+        {
+          "label": "Investigation note",
+          "uri": "file:///workspace/notes/harbor-routing.md"
+        }
+      ],
+      "runtime": {},
+      "tags": [
+        "harbor",
+        "decision"
+      ],
+      "evidence": [
+        {
+          "scope": "identity",
+          "observed_at": "2026-10-21T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#identity",
+          "summary": "The sample investigation records the reason for choosing platform/apps/site.",
+          "sample": true
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": null,
+      "review_after_days": 14,
+      "relations": [
+        {
+          "type": "documents",
+          "to": "k-a10001"
+        },
+        {
+          "type": "documents",
+          "to": "k-a10004"
+        }
+      ],
+      "history": []
+    },
+    {
+      "id": "k-a10006",
+      "title": "Harbor preview",
+      "kind": "service",
+      "summary": "A preview release was last traced to web-01 in September.",
+      "why": "A reachable preview URL does not prove the currently checked-out folder or branch matches it.",
+      "owner": "Sample curator",
+      "state": "curated",
+      "locations": [
+        {
+          "label": "Preview address",
+          "uri": "https://preview.harbor.example.test"
+        }
+      ],
+      "runtime": {
+        "address": "https://preview.harbor.example.test",
+        "host": "web-01 / sample server",
+        "deployment": "preview-2026-09-20-3f918aa",
+        "repo": "https://git.example.test/harbor/platform",
+        "subdirectory": "apps/site",
+        "revision": "3f918aa674c2180dbb41d27e552c6ab809e0312f",
+        "root": "/srv/harbor/preview/3f918aa/apps/site",
+        "entrypoint": "systemd harbor-web → node server.js",
+        "environment": "preview (fictional)"
+      },
+      "tags": [
+        "harbor",
+        "preview"
+      ],
+      "evidence": [
+        {
+          "scope": "route",
+          "observed_at": "2026-09-20T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#route",
+          "summary": "September sample observation for the preview route.",
+          "sample": true,
+          "deployment": "preview-2026-09-20-3f918aa"
+        },
+        {
+          "scope": "source",
+          "observed_at": "2026-09-20T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#source",
+          "summary": "September sample observation for the preview source.",
+          "sample": true,
+          "deployment": "preview-2026-09-20-3f918aa"
+        },
+        {
+          "scope": "runtime",
+          "observed_at": "2026-09-20T14:00:00+00:00",
+          "ref": "evidence/harbor-investigation.md#runtime",
+          "summary": "September sample observation for the preview runtime.",
+          "sample": true,
+          "deployment": "preview-2026-09-20-3f918aa"
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": "2026-09-20T14:00:00+00:00",
+      "review_after_days": 7,
+      "relations": [
+        {
+          "type": "runs_on",
+          "to": "k-a10002"
+        },
+        {
+          "type": "built_from",
+          "to": "k-a10003"
+        }
+      ],
+      "history": []
+    },
+    {
+      "id": "k-a10007",
+      "title": "Nightly metrics job",
+      "kind": "service",
+      "summary": "A note mentions a metrics job; the runner and schedule are still unknown.",
+      "why": "Capture the clue now so the unresolved part survives the session.",
+      "owner": "Sample curator",
+      "state": "draft",
+      "locations": [
+        {
+          "label": "Related repository",
+          "uri": "https://git.example.test/harbor/platform"
+        }
+      ],
+      "runtime": {},
+      "tags": [
+        "harbor",
+        "job"
+      ],
+      "evidence": [],
+      "uncertainties": [
+        "Identify the scheduler and runtime host.",
+        "Find its launch command and deployed revision."
+      ],
+      "verified_at": null,
+      "review_after_days": 14,
+      "relations": [],
+      "history": []
+    }
+  ],
+  "events": []
+}

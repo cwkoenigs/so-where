@@ -1,0 +1,46 @@
+{
+  "observed_at": "2026-10-23T00:17:49+00:00",
+  "platform": "Darwin arm64",
+  "listener": {
+    "command": [
+      "lsof",
+      "-nP",
+      "-iTCP:8765",
+      "-sTCP:LISTEN"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "endpoint": {
+    "error": "URLError: <urlopen error [Errno 61] Connection refused>"
+  },
+  "workspace_git": {
+    "command": [
+      "git",
+      "-C",
+      "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more",
+      "rev-parse",
+      "--show-toplevel"
+    ],
+    "exit_code": 128,
+    "stdout": "",
+    "stderr": "fatal: not a git repository (or any of the parent directories): .git"
+  },
+  "repository": "/Users/clarkkoenigs/Developer/skills-os",
+  "remote": "https://github.com/cwkoenigs/skills-os.git",
+  "head": "7db4b8705ddb9907897eb37b74d966ddb4515255",
+  "status": "M README.md\n?? so-where/",
+  "sha256": {
+    "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/index.html": "feda12ac453e3e60b1f5d41b81efff60686c46cd4d6e73ca987b6bf6b0bc0049",
+    "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/registry.json": "de48110023737e33475032e358ea0ae233c85d086c8b14a1a464512ab3413d48",
+    "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/where.py": "e869b4d100f96a5ccc9979a31d847eb4ef850562ba2d0fbcbbde9623980a6946",
+    "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/dashboard.html": "b93a97d7a9d46acd86295d14d79692ff26f0c21dde76b80dc6745126e2ae32f4",
+    "/Users/clarkkoenigs/Developer/skills-os/so-where/references/where.py": "e869b4d100f96a5ccc9979a31d847eb4ef850562ba2d0fbcbbde9623980a6946"
+  },
+  "sample_registry_demo": true,
+  "installed_links": {
+    "/Users/clarkkoenigs/.codex/skills/so-where": "/Users/clarkkoenigs/Developer/skills-os/so-where",
+    "/Users/clarkkoenigs/.claude/skills/so-where": "/Users/clarkkoenigs/Developer/skills-os/so-where"
+  }
+}

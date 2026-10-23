@@ -1,0 +1,1151 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "revision": 16,
+  "records": [
+    {
+      "id": "k-e424a8",
+      "title": "Where demo website bundle",
+      "kind": "document",
+      "summary": "The demo is served from demo/ in the consolidated so-where repository and uses the canonical skill helper and template.",
+      "why": "The website, data, and reusable skill now share one Git checkout; old chat output paths are compatibility links.",
+      "owner": "Clark",
+      "state": "curated",
+      "locations": [
+        {
+          "label": "Demo serving root",
+          "uri": "file:///Users/clarkkoenigs/Developer/so-where/demo"
+        },
+        {
+          "label": "Generated page",
+          "uri": "file:///Users/clarkkoenigs/Developer/so-where/demo/index.html"
+        },
+        {
+          "label": "Canonical template",
+          "uri": "file:///Users/clarkkoenigs/Developer/so-where/so-where/references/dashboard.html"
+        },
+        {
+          "label": "Fictional example data",
+          "uri": "file:///Users/clarkkoenigs/Developer/so-where/demo/registry.json"
+        }
+      ],
+      "runtime": {},
+      "tags": [
+        "where",
+        "local",
+        "source"
+      ],
+      "evidence": [
+        {
+          "scope": "identity",
+          "observed_at": "2026-10-23T00:17:49+00:00",
+          "ref": "evidence/local-site-observation.md",
+          "summary": "Files exist; their hashes and generator/handler paths were inspected. The sample registry is explicitly demo: true.",
+          "sample": false
+        },
+        {
+          "scope": "identity",
+          "observed_at": "2026-10-23T12:34:23+00:00",
+          "ref": "evidence/repository-consolidation.md",
+          "summary": "Verified demo files and template in the consolidated checkout; the existing example manifest remains demo: true.",
+          "sample": false
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": "2026-10-23T12:34:23+00:00",
+      "review_after_days": 14,
+      "relations": [
+        {
+          "type": "related_to",
+          "to": "k-5cdf49"
+        }
+      ],
+      "history": [
+        {
+          "action": "promote",
+          "at": "2026-10-23T00:17:49+00:00",
+          "reason": "",
+          "before": {
+            "id": "k-e424a8",
+            "title": "Where website source bundle in this chat",
+            "kind": "document",
+            "summary": "The local website files are in outputs/where-sample. Its HTML is generated from the bundled template and fictional registry.",
+            "why": "This is the actual site directory used for the local demo. The similarly named skills-os folder is the reusable skill source, a separate location.",
+            "owner": "Clark",
+            "state": "draft",
+            "locations": [
+              {
+                "label": "Site directory in this chat workspace",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample"
+              },
+              {
+                "label": "Generated website",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/index.html"
+              },
+              {
+                "label": "Editable HTML template",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/dashboard.html"
+              },
+              {
+                "label": "Sample data (fictional Harbor records)",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/registry.json"
+              },
+              {
+                "label": "Bundled Python server and generator",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/where.py"
+              }
+            ],
+            "runtime": {},
+            "tags": [
+              "where",
+              "local",
+              "source"
+            ],
+            "evidence": [
+              {
+                "scope": "identity",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "Files exist; their hashes and generator/handler paths were inspected. The sample registry is explicitly demo: true.",
+                "sample": false
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": null,
+            "review_after_days": 14,
+            "relations": []
+          }
+        },
+        {
+          "action": "link",
+          "at": "2026-10-23T00:17:49+00:00",
+          "reason": "",
+          "before": {
+            "id": "k-e424a8",
+            "title": "Where website source bundle in this chat",
+            "kind": "document",
+            "summary": "The local website files are in outputs/where-sample. Its HTML is generated from the bundled template and fictional registry.",
+            "why": "This is the actual site directory used for the local demo. The similarly named skills-os folder is the reusable skill source, a separate location.",
+            "owner": "Clark",
+            "state": "curated",
+            "locations": [
+              {
+                "label": "Site directory in this chat workspace",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample"
+              },
+              {
+                "label": "Generated website",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/index.html"
+              },
+              {
+                "label": "Editable HTML template",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/dashboard.html"
+              },
+              {
+                "label": "Sample data (fictional Harbor records)",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/registry.json"
+              },
+              {
+                "label": "Bundled Python server and generator",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/where.py"
+              }
+            ],
+            "runtime": {},
+            "tags": [
+              "where",
+              "local",
+              "source"
+            ],
+            "evidence": [
+              {
+                "scope": "identity",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "Files exist; their hashes and generator/handler paths were inspected. The sample registry is explicitly demo: true.",
+                "sample": false
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": "2026-10-23T00:17:49+00:00",
+            "review_after_days": 14,
+            "relations": []
+          }
+        },
+        {
+          "action": "amend",
+          "at": "2026-10-23T12:34:23+00:00",
+          "reason": "Relocated into the consolidated Git repository, preserving old locations in history.",
+          "before": {
+            "id": "k-e424a8",
+            "title": "Where website source bundle in this chat",
+            "kind": "document",
+            "summary": "The local website files are in outputs/where-sample. Its HTML is generated from the bundled template and fictional registry.",
+            "why": "This is the actual site directory used for the local demo. The similarly named skills-os folder is the reusable skill source, a separate location.",
+            "owner": "Clark",
+            "state": "curated",
+            "locations": [
+              {
+                "label": "Site directory in this chat workspace",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample"
+              },
+              {
+                "label": "Generated website",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/index.html"
+              },
+              {
+                "label": "Editable HTML template",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/dashboard.html"
+              },
+              {
+                "label": "Sample data (fictional Harbor records)",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/registry.json"
+              },
+              {
+                "label": "Bundled Python server and generator",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/where.py"
+              }
+            ],
+            "runtime": {},
+            "tags": [
+              "where",
+              "local",
+              "source"
+            ],
+            "evidence": [
+              {
+                "scope": "identity",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "Files exist; their hashes and generator/handler paths were inspected. The sample registry is explicitly demo: true.",
+                "sample": false
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": "2026-10-23T00:17:49+00:00",
+            "review_after_days": 14,
+            "relations": [
+              {
+                "type": "related_to",
+                "to": "k-26c947"
+              }
+            ]
+          }
+        },
+        {
+          "action": "promote",
+          "at": "2026-10-23T12:34:23+00:00",
+          "reason": "",
+          "before": {
+            "id": "k-e424a8",
+            "title": "Where demo website bundle",
+            "kind": "document",
+            "summary": "The demo is served from demo/ in the consolidated so-where repository and uses the canonical skill helper and template.",
+            "why": "The website, data, and reusable skill now share one Git checkout; old chat output paths are compatibility links.",
+            "owner": "Clark",
+            "state": "draft",
+            "locations": [
+              {
+                "label": "Demo serving root",
+                "uri": "file:///Users/clarkkoenigs/Developer/so-where/demo"
+              },
+              {
+                "label": "Generated page",
+                "uri": "file:///Users/clarkkoenigs/Developer/so-where/demo/index.html"
+              },
+              {
+                "label": "Canonical template",
+                "uri": "file:///Users/clarkkoenigs/Developer/so-where/so-where/references/dashboard.html"
+              },
+              {
+                "label": "Fictional example data",
+                "uri": "file:///Users/clarkkoenigs/Developer/so-where/demo/registry.json"
+              }
+            ],
+            "runtime": {},
+            "tags": [
+              "where",
+              "local",
+              "source"
+            ],
+            "evidence": [
+              {
+                "scope": "identity",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "Files exist; their hashes and generator/handler paths were inspected. The sample registry is explicitly demo: true.",
+                "sample": false
+              },
+              {
+                "scope": "identity",
+                "observed_at": "2026-10-23T12:34:23+00:00",
+                "ref": "evidence/repository-consolidation.md",
+                "summary": "Verified demo files and template in the consolidated checkout; the existing example manifest remains demo: true.",
+                "sample": false
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": null,
+            "review_after_days": 14,
+            "relations": [
+              {
+                "type": "related_to",
+                "to": "k-5cdf49"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-26c947",
+      "title": "skills-os repository and installed Where skill",
+      "kind": "repository",
+      "summary": "The reusable so-where skill lives in skills-os and is linked into Codex and Claude Code. The new skill is currently untracked in Git.",
+      "why": "Distinguish the maintained skill from the generated sample site. Installed symlinks follow this checkout; the sample launch used its own bundled helper.",
+      "owner": "Clark",
+      "state": "retired",
+      "locations": [
+        {
+          "label": "Repository on this Mac",
+          "uri": "file:///Users/clarkkoenigs/Developer/skills-os"
+        },
+        {
+          "label": "Registered skill source",
+          "uri": "file:///Users/clarkkoenigs/Developer/skills-os/so-where"
+        },
+        {
+          "label": "Git remote",
+          "uri": "https://github.com/cwkoenigs/skills-os.git"
+        },
+        {
+          "label": "Codex link on this Mac",
+          "uri": "file:///Users/clarkkoenigs/.codex/skills/so-where"
+        },
+        {
+          "label": "Claude Code link on this Mac",
+          "uri": "file:///Users/clarkkoenigs/.claude/skills/so-where"
+        }
+      ],
+      "runtime": {},
+      "tags": [
+        "where",
+        "skills",
+        "source"
+      ],
+      "evidence": [
+        {
+          "scope": "identity",
+          "observed_at": "2026-10-23T00:17:49+00:00",
+          "ref": "evidence/local-site-observation.md",
+          "summary": "Git remote, HEAD and working tree inspected; both installed symlinks resolve here. Sample and registered helper hashes match.",
+          "sample": false
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": "2026-10-23T00:17:49+00:00",
+      "review_after_days": 14,
+      "relations": [],
+      "history": [
+        {
+          "action": "promote",
+          "at": "2026-10-23T00:17:49+00:00",
+          "reason": "",
+          "before": {
+            "id": "k-26c947",
+            "title": "skills-os repository and installed Where skill",
+            "kind": "repository",
+            "summary": "The reusable so-where skill lives in skills-os and is linked into Codex and Claude Code. The new skill is currently untracked in Git.",
+            "why": "Distinguish the maintained skill from the generated sample site. Installed symlinks follow this checkout; the sample launch used its own bundled helper.",
+            "owner": "Clark",
+            "state": "draft",
+            "locations": [
+              {
+                "label": "Repository on this Mac",
+                "uri": "file:///Users/clarkkoenigs/Developer/skills-os"
+              },
+              {
+                "label": "Registered skill source",
+                "uri": "file:///Users/clarkkoenigs/Developer/skills-os/so-where"
+              },
+              {
+                "label": "Git remote",
+                "uri": "https://github.com/cwkoenigs/skills-os.git"
+              },
+              {
+                "label": "Codex link on this Mac",
+                "uri": "file:///Users/clarkkoenigs/.codex/skills/so-where"
+              },
+              {
+                "label": "Claude Code link on this Mac",
+                "uri": "file:///Users/clarkkoenigs/.claude/skills/so-where"
+              }
+            ],
+            "runtime": {},
+            "tags": [
+              "where",
+              "skills",
+              "source"
+            ],
+            "evidence": [
+              {
+                "scope": "identity",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "Git remote, HEAD and working tree inspected; both installed symlinks resolve here. Sample and registered helper hashes match.",
+                "sample": false
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": null,
+            "review_after_days": 14,
+            "relations": []
+          }
+        },
+        {
+          "action": "retire",
+          "at": "2026-10-23T12:34:23+00:00",
+          "reason": "so-where was extracted from skills-os into its standalone consolidated repository; historical locations retained.",
+          "before": {
+            "id": "k-26c947",
+            "title": "skills-os repository and installed Where skill",
+            "kind": "repository",
+            "summary": "The reusable so-where skill lives in skills-os and is linked into Codex and Claude Code. The new skill is currently untracked in Git.",
+            "why": "Distinguish the maintained skill from the generated sample site. Installed symlinks follow this checkout; the sample launch used its own bundled helper.",
+            "owner": "Clark",
+            "state": "curated",
+            "locations": [
+              {
+                "label": "Repository on this Mac",
+                "uri": "file:///Users/clarkkoenigs/Developer/skills-os"
+              },
+              {
+                "label": "Registered skill source",
+                "uri": "file:///Users/clarkkoenigs/Developer/skills-os/so-where"
+              },
+              {
+                "label": "Git remote",
+                "uri": "https://github.com/cwkoenigs/skills-os.git"
+              },
+              {
+                "label": "Codex link on this Mac",
+                "uri": "file:///Users/clarkkoenigs/.codex/skills/so-where"
+              },
+              {
+                "label": "Claude Code link on this Mac",
+                "uri": "file:///Users/clarkkoenigs/.claude/skills/so-where"
+              }
+            ],
+            "runtime": {},
+            "tags": [
+              "where",
+              "skills",
+              "source"
+            ],
+            "evidence": [
+              {
+                "scope": "identity",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "Git remote, HEAD and working tree inspected; both installed symlinks resolve here. Sample and registered helper hashes match.",
+                "sample": false
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": "2026-10-23T00:17:49+00:00",
+            "review_after_days": 14,
+            "relations": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-493d7d",
+      "title": "Local Where sample website",
+      "kind": "service",
+      "summary": "Observed running at http://127.0.0.1:8765/ on 2026-10-23T12:34:23+00:00, from this repository’s demo/ directory as Python process 19338.",
+      "why": "The listening process, serving root, source template, and real map now resolve to one Git repository.",
+      "owner": "Clark",
+      "state": "curated",
+      "locations": [
+        {
+          "label": "Local website",
+          "uri": "http://127.0.0.1:8765/"
+        },
+        {
+          "label": "Canonical serving root",
+          "uri": "file:///Users/clarkkoenigs/Developer/so-where/demo"
+        },
+        {
+          "label": "Repository launch instructions",
+          "uri": "file:///Users/clarkkoenigs/Developer/so-where/README.md"
+        }
+      ],
+      "runtime": {
+        "address": "http://127.0.0.1:8765/",
+        "host": "Current macOS machine, loopback only",
+        "root": "/Users/clarkkoenigs/Developer/so-where/demo",
+        "subdirectory": "demo",
+        "repo": "file:///Users/clarkkoenigs/Developer/so-where",
+        "entrypoint": "make demo (python3 so-where/references/where.py --root demo serve --port 8765)",
+        "environment": "local demonstration; not a deployed public website",
+        "deployment": "local-pid-19338-html-98a894df313f548e",
+        "revision": "sha256:a902818cb45d1f557dee173d36d8b6a998a308c07df27d0ade86d80a2403bd08"
+      },
+      "tags": [
+        "where",
+        "local",
+        "website"
+      ],
+      "evidence": [
+        {
+          "scope": "route",
+          "observed_at": "2026-10-23T00:17:49+00:00",
+          "ref": "evidence/local-site-observation.md",
+          "summary": "The exact loopback address refused the connection; lsof found no process listening on TCP 8765.",
+          "sample": false
+        },
+        {
+          "scope": "source",
+          "observed_at": "2026-10-23T00:17:49+00:00",
+          "ref": "evidence/local-site-observation.md",
+          "summary": "The handler serves root/index.html; the historical command selected outputs/where-sample. No current serving process was inferred.",
+          "sample": false
+        },
+        {
+          "scope": "route",
+          "observed_at": "2026-10-23T11:52:42+00:00",
+          "ref": "evidence/local-site-running.md",
+          "summary": "HTTP 200 from loopback port 8765; response bytes match the selected root/index.html exactly.",
+          "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+          "sample": false
+        },
+        {
+          "scope": "source",
+          "observed_at": "2026-10-23T11:52:42+00:00",
+          "ref": "evidence/local-site-running.md",
+          "summary": "Measured helper, template and registry content hashes identify this source snapshot; this is not a Git revision.",
+          "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+          "sample": false
+        },
+        {
+          "scope": "runtime",
+          "observed_at": "2026-10-23T11:52:42+00:00",
+          "ref": "evidence/local-site-running.md",
+          "summary": "Listener PID 11751, its exact launch command, and its cwd resolve to the sample helper and serving root.",
+          "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+          "sample": false
+        },
+        {
+          "scope": "route",
+          "observed_at": "2026-10-23T12:34:23+00:00",
+          "ref": "evidence/repository-consolidation.md",
+          "summary": "HTTP 200 from port 8765; response bytes match the canonical demo/index.html.",
+          "sample": false,
+          "deployment": "local-pid-19338-html-98a894df313f548e"
+        },
+        {
+          "scope": "source",
+          "observed_at": "2026-10-23T12:34:23+00:00",
+          "ref": "evidence/repository-consolidation.md",
+          "summary": "Source fingerprint identifies the canonical helper, template, and demo data in this Git checkout.",
+          "sample": false,
+          "deployment": "local-pid-19338-html-98a894df313f548e"
+        },
+        {
+          "scope": "runtime",
+          "observed_at": "2026-10-23T12:34:23+00:00",
+          "ref": "evidence/repository-consolidation.md",
+          "summary": "Listener PID 19338, command and cwd resolve to this repository and demo serving root.",
+          "sample": false,
+          "deployment": "local-pid-19338-html-98a894df313f548e"
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": "2026-10-23T12:34:23+00:00",
+      "review_after_days": 1,
+      "relations": [
+        {
+          "type": "built_from",
+          "to": "k-e424a8"
+        },
+        {
+          "type": "built_from",
+          "to": "k-5cdf49"
+        }
+      ],
+      "history": [
+        {
+          "action": "amend",
+          "at": "2026-10-23T11:52:42+00:00",
+          "reason": "User requested startup; observed listener, process, source fingerprint, and matching served HTML.",
+          "before": {
+            "id": "k-493d7d",
+            "title": "Local Where sample website — stopped",
+            "kind": "service",
+            "summary": "The last local site used http://127.0.0.1:8765 and the outputs/where-sample root. It is currently stopped: connection refused and no listening process.",
+            "why": "A browser address alone does not identify its serving folder. This records the actual local bundle, the historical launch command, and the current absence of a server.",
+            "owner": "Clark",
+            "state": "draft",
+            "locations": [
+              {
+                "label": "Last local address",
+                "uri": "http://127.0.0.1:8765/"
+              },
+              {
+                "label": "Last serving root",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample"
+              },
+              {
+                "label": "Original launch instructions",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/README.md"
+              }
+            ],
+            "runtime": {
+              "address": "http://127.0.0.1:8765/",
+              "host": "Current macOS machine, loopback only",
+              "root": "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample",
+              "subdirectory": "outputs/where-sample",
+              "repo": "Unversioned chat workspace; separate reusable skill in skills-os",
+              "entrypoint": "python3 \"/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/where.py\" --root \"/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample\" serve",
+              "environment": "local demonstration; not a deployed public website"
+            },
+            "tags": [
+              "where",
+              "local",
+              "website",
+              "stopped"
+            ],
+            "evidence": [
+              {
+                "scope": "route",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "The exact loopback address refused the connection; lsof found no process listening on TCP 8765.",
+                "sample": false
+              },
+              {
+                "scope": "source",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "The handler serves root/index.html; the historical command selected outputs/where-sample. No current serving process was inferred.",
+                "sample": false
+              }
+            ],
+            "uncertainties": [
+              "On the next launch, observe the process, command line, working directory and served bytes to verify the running instance.",
+              "No active deployment or Git revision can be attributed while the service is stopped; retain the source hashes as a snapshot, not live serving proof."
+            ],
+            "verified_at": null,
+            "review_after_days": 1,
+            "relations": [
+              {
+                "type": "built_from",
+                "to": "k-e424a8"
+              },
+              {
+                "type": "related_to",
+                "to": "k-26c947"
+              }
+            ]
+          }
+        },
+        {
+          "action": "promote",
+          "at": "2026-10-23T11:52:42+00:00",
+          "reason": "",
+          "before": {
+            "id": "k-493d7d",
+            "title": "Local Where sample website",
+            "kind": "service",
+            "summary": "Observed running at http://127.0.0.1:8765/ on 2026-10-23T11:52:42+00:00, served by local Python process 11751 from outputs/where-sample.",
+            "why": "A browser address alone does not identify its serving folder. This records the actual local bundle, the historical launch command, and the current absence of a server.",
+            "owner": "Clark",
+            "state": "draft",
+            "locations": [
+              {
+                "label": "Last local address",
+                "uri": "http://127.0.0.1:8765/"
+              },
+              {
+                "label": "Last serving root",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample"
+              },
+              {
+                "label": "Original launch instructions",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/README.md"
+              }
+            ],
+            "runtime": {
+              "address": "http://127.0.0.1:8765/",
+              "host": "Current macOS machine, loopback only",
+              "root": "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample",
+              "subdirectory": "outputs/where-sample",
+              "repo": "Unversioned chat workspace; separate reusable skill in skills-os",
+              "entrypoint": "python3 \"/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/where.py\" --root \"/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample\" serve",
+              "environment": "local demonstration; not a deployed public website",
+              "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+              "revision": "sha256:a2db33aa948b127772b1071494b5dbc9c0bcec93925c568072d9bd3b47c4b188"
+            },
+            "tags": [
+              "where",
+              "local",
+              "website"
+            ],
+            "evidence": [
+              {
+                "scope": "route",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "The exact loopback address refused the connection; lsof found no process listening on TCP 8765.",
+                "sample": false
+              },
+              {
+                "scope": "source",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "The handler serves root/index.html; the historical command selected outputs/where-sample. No current serving process was inferred.",
+                "sample": false
+              },
+              {
+                "scope": "route",
+                "observed_at": "2026-10-23T11:52:42+00:00",
+                "ref": "evidence/local-site-running.md",
+                "summary": "HTTP 200 from loopback port 8765; response bytes match the selected root/index.html exactly.",
+                "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+                "sample": false
+              },
+              {
+                "scope": "source",
+                "observed_at": "2026-10-23T11:52:42+00:00",
+                "ref": "evidence/local-site-running.md",
+                "summary": "Measured helper, template and registry content hashes identify this source snapshot; this is not a Git revision.",
+                "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+                "sample": false
+              },
+              {
+                "scope": "runtime",
+                "observed_at": "2026-10-23T11:52:42+00:00",
+                "ref": "evidence/local-site-running.md",
+                "summary": "Listener PID 11751, its exact launch command, and its cwd resolve to the sample helper and serving root.",
+                "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+                "sample": false
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": null,
+            "review_after_days": 1,
+            "relations": [
+              {
+                "type": "built_from",
+                "to": "k-e424a8"
+              },
+              {
+                "type": "related_to",
+                "to": "k-26c947"
+              }
+            ]
+          }
+        },
+        {
+          "action": "amend",
+          "at": "2026-10-23T12:34:23+00:00",
+          "reason": "Restarted from consolidated repository and verified current route, source, process, and working directory.",
+          "before": {
+            "id": "k-493d7d",
+            "title": "Local Where sample website",
+            "kind": "service",
+            "summary": "Observed running at http://127.0.0.1:8765/ on 2026-10-23T11:52:42+00:00, served by local Python process 11751 from outputs/where-sample.",
+            "why": "A browser address alone does not identify its serving folder. This records the actual local bundle, the historical launch command, and the current absence of a server.",
+            "owner": "Clark",
+            "state": "curated",
+            "locations": [
+              {
+                "label": "Last local address",
+                "uri": "http://127.0.0.1:8765/"
+              },
+              {
+                "label": "Last serving root",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample"
+              },
+              {
+                "label": "Original launch instructions",
+                "uri": "file:///Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/README.md"
+              }
+            ],
+            "runtime": {
+              "address": "http://127.0.0.1:8765/",
+              "host": "Current macOS machine, loopback only",
+              "root": "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample",
+              "subdirectory": "outputs/where-sample",
+              "repo": "Unversioned chat workspace; separate reusable skill in skills-os",
+              "entrypoint": "python3 \"/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/where.py\" --root \"/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample\" serve",
+              "environment": "local demonstration; not a deployed public website",
+              "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+              "revision": "sha256:a2db33aa948b127772b1071494b5dbc9c0bcec93925c568072d9bd3b47c4b188"
+            },
+            "tags": [
+              "where",
+              "local",
+              "website"
+            ],
+            "evidence": [
+              {
+                "scope": "route",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "The exact loopback address refused the connection; lsof found no process listening on TCP 8765.",
+                "sample": false
+              },
+              {
+                "scope": "source",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "The handler serves root/index.html; the historical command selected outputs/where-sample. No current serving process was inferred.",
+                "sample": false
+              },
+              {
+                "scope": "route",
+                "observed_at": "2026-10-23T11:52:42+00:00",
+                "ref": "evidence/local-site-running.md",
+                "summary": "HTTP 200 from loopback port 8765; response bytes match the selected root/index.html exactly.",
+                "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+                "sample": false
+              },
+              {
+                "scope": "source",
+                "observed_at": "2026-10-23T11:52:42+00:00",
+                "ref": "evidence/local-site-running.md",
+                "summary": "Measured helper, template and registry content hashes identify this source snapshot; this is not a Git revision.",
+                "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+                "sample": false
+              },
+              {
+                "scope": "runtime",
+                "observed_at": "2026-10-23T11:52:42+00:00",
+                "ref": "evidence/local-site-running.md",
+                "summary": "Listener PID 11751, its exact launch command, and its cwd resolve to the sample helper and serving root.",
+                "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+                "sample": false
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": "2026-10-23T11:52:42+00:00",
+            "review_after_days": 1,
+            "relations": [
+              {
+                "type": "built_from",
+                "to": "k-e424a8"
+              },
+              {
+                "type": "related_to",
+                "to": "k-26c947"
+              }
+            ]
+          }
+        },
+        {
+          "action": "promote",
+          "at": "2026-10-23T12:34:23+00:00",
+          "reason": "",
+          "before": {
+            "id": "k-493d7d",
+            "title": "Local Where sample website",
+            "kind": "service",
+            "summary": "Observed running at http://127.0.0.1:8765/ on 2026-10-23T12:34:23+00:00, from this repository’s demo/ directory as Python process 19338.",
+            "why": "The listening process, serving root, source template, and real map now resolve to one Git repository.",
+            "owner": "Clark",
+            "state": "draft",
+            "locations": [
+              {
+                "label": "Local website",
+                "uri": "http://127.0.0.1:8765/"
+              },
+              {
+                "label": "Canonical serving root",
+                "uri": "file:///Users/clarkkoenigs/Developer/so-where/demo"
+              },
+              {
+                "label": "Repository launch instructions",
+                "uri": "file:///Users/clarkkoenigs/Developer/so-where/README.md"
+              }
+            ],
+            "runtime": {
+              "address": "http://127.0.0.1:8765/",
+              "host": "Current macOS machine, loopback only",
+              "root": "/Users/clarkkoenigs/Developer/so-where/demo",
+              "subdirectory": "demo",
+              "repo": "file:///Users/clarkkoenigs/Developer/so-where",
+              "entrypoint": "make demo (python3 so-where/references/where.py --root demo serve --port 8765)",
+              "environment": "local demonstration; not a deployed public website",
+              "deployment": "local-pid-19338-html-98a894df313f548e",
+              "revision": "sha256:a902818cb45d1f557dee173d36d8b6a998a308c07df27d0ade86d80a2403bd08"
+            },
+            "tags": [
+              "where",
+              "local",
+              "website"
+            ],
+            "evidence": [
+              {
+                "scope": "route",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "The exact loopback address refused the connection; lsof found no process listening on TCP 8765.",
+                "sample": false
+              },
+              {
+                "scope": "source",
+                "observed_at": "2026-10-23T00:17:49+00:00",
+                "ref": "evidence/local-site-observation.md",
+                "summary": "The handler serves root/index.html; the historical command selected outputs/where-sample. No current serving process was inferred.",
+                "sample": false
+              },
+              {
+                "scope": "route",
+                "observed_at": "2026-10-23T11:52:42+00:00",
+                "ref": "evidence/local-site-running.md",
+                "summary": "HTTP 200 from loopback port 8765; response bytes match the selected root/index.html exactly.",
+                "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+                "sample": false
+              },
+              {
+                "scope": "source",
+                "observed_at": "2026-10-23T11:52:42+00:00",
+                "ref": "evidence/local-site-running.md",
+                "summary": "Measured helper, template and registry content hashes identify this source snapshot; this is not a Git revision.",
+                "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+                "sample": false
+              },
+              {
+                "scope": "runtime",
+                "observed_at": "2026-10-23T11:52:42+00:00",
+                "ref": "evidence/local-site-running.md",
+                "summary": "Listener PID 11751, its exact launch command, and its cwd resolve to the sample helper and serving root.",
+                "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+                "sample": false
+              },
+              {
+                "scope": "route",
+                "observed_at": "2026-10-23T12:34:23+00:00",
+                "ref": "evidence/repository-consolidation.md",
+                "summary": "HTTP 200 from port 8765; response bytes match the canonical demo/index.html.",
+                "sample": false,
+                "deployment": "local-pid-19338-html-98a894df313f548e"
+              },
+              {
+                "scope": "source",
+                "observed_at": "2026-10-23T12:34:23+00:00",
+                "ref": "evidence/repository-consolidation.md",
+                "summary": "Source fingerprint identifies the canonical helper, template, and demo data in this Git checkout.",
+                "sample": false,
+                "deployment": "local-pid-19338-html-98a894df313f548e"
+              },
+              {
+                "scope": "runtime",
+                "observed_at": "2026-10-23T12:34:23+00:00",
+                "ref": "evidence/repository-consolidation.md",
+                "summary": "Listener PID 19338, command and cwd resolve to this repository and demo serving root.",
+                "sample": false,
+                "deployment": "local-pid-19338-html-98a894df313f548e"
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": null,
+            "review_after_days": 1,
+            "relations": [
+              {
+                "type": "built_from",
+                "to": "k-e424a8"
+              },
+              {
+                "type": "built_from",
+                "to": "k-5cdf49"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "k-5cdf49",
+      "title": "so-where consolidated repository",
+      "kind": "repository",
+      "summary": "The skill, local demo, real map, and tests are maintained together in this local Git repository.",
+      "why": "One source of truth replaces the separate chat output and skills-os copies. The older independent where/Atlas inventory is outside this migration.",
+      "owner": "Clark",
+      "state": "curated",
+      "locations": [
+        {
+          "label": "Canonical Git checkout on this Mac",
+          "uri": "file:///Users/clarkkoenigs/Developer/so-where"
+        },
+        {
+          "label": "Skill source",
+          "uri": "file:///Users/clarkkoenigs/Developer/so-where/so-where"
+        }
+      ],
+      "runtime": {},
+      "tags": [
+        "where",
+        "source",
+        "git"
+      ],
+      "evidence": [
+        {
+          "scope": "identity",
+          "observed_at": "2026-10-23T12:34:23+00:00",
+          "ref": "evidence/repository-consolidation.md",
+          "summary": "Verified Git main branch, canonical files, and installed runtime links in the consolidated repository; no remote configured.",
+          "sample": false
+        }
+      ],
+      "uncertainties": [],
+      "verified_at": "2026-10-23T12:34:23+00:00",
+      "review_after_days": 14,
+      "relations": [],
+      "history": [
+        {
+          "action": "promote",
+          "at": "2026-10-23T12:34:23+00:00",
+          "reason": "",
+          "before": {
+            "id": "k-5cdf49",
+            "title": "so-where consolidated repository",
+            "kind": "repository",
+            "summary": "The skill, local demo, real map, and tests are maintained together in this local Git repository.",
+            "why": "One source of truth replaces the separate chat output and skills-os copies. The older independent where/Atlas inventory is outside this migration.",
+            "owner": "Clark",
+            "state": "draft",
+            "locations": [
+              {
+                "label": "Canonical Git checkout on this Mac",
+                "uri": "file:///Users/clarkkoenigs/Developer/so-where"
+              },
+              {
+                "label": "Skill source",
+                "uri": "file:///Users/clarkkoenigs/Developer/so-where/so-where"
+              }
+            ],
+            "runtime": {},
+            "tags": [
+              "where",
+              "source",
+              "git"
+            ],
+            "evidence": [
+              {
+                "scope": "identity",
+                "observed_at": "2026-10-23T12:34:23+00:00",
+                "ref": "evidence/repository-consolidation.md",
+                "summary": "Verified Git main branch, canonical files, and installed runtime links in the consolidated repository; no remote configured.",
+                "sample": false
+              }
+            ],
+            "uncertainties": [],
+            "verified_at": null,
+            "review_after_days": 14,
+            "relations": []
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-10-23T00:17:49+00:00",
+      "action": "capture",
+      "id": "k-e424a8",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T00:17:49+00:00",
+      "action": "promote",
+      "id": "k-e424a8",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T00:17:49+00:00",
+      "action": "capture",
+      "id": "k-26c947",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T00:17:49+00:00",
+      "action": "promote",
+      "id": "k-26c947",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T00:17:49+00:00",
+      "action": "capture",
+      "id": "k-493d7d",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T00:17:49+00:00",
+      "action": "link",
+      "id": "k-e424a8",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T11:52:42+00:00",
+      "action": "amend",
+      "id": "k-493d7d",
+      "reason": "User requested startup; observed listener, process, source fingerprint, and matching served HTML."
+    },
+    {
+      "at": "2026-10-23T11:52:42+00:00",
+      "action": "promote",
+      "id": "k-493d7d",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T11:53:10+00:00",
+      "action": "history-correction",
+      "id": "k-493d7d",
+      "reason": "Restore the pre-start snapshot from the original capture script; current running evidence unchanged."
+    },
+    {
+      "at": "2026-10-23T12:34:23+00:00",
+      "action": "capture",
+      "id": "k-5cdf49",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T12:34:23+00:00",
+      "action": "promote",
+      "id": "k-5cdf49",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T12:34:23+00:00",
+      "action": "retire",
+      "id": "k-26c947",
+      "reason": "so-where was extracted from skills-os into its standalone consolidated repository; historical locations retained."
+    },
+    {
+      "at": "2026-10-23T12:34:23+00:00",
+      "action": "amend",
+      "id": "k-e424a8",
+      "reason": "Relocated into the consolidated Git repository, preserving old locations in history."
+    },
+    {
+      "at": "2026-10-23T12:34:23+00:00",
+      "action": "promote",
+      "id": "k-e424a8",
+      "reason": ""
+    },
+    {
+      "at": "2026-10-23T12:34:23+00:00",
+      "action": "amend",
+      "id": "k-493d7d",
+      "reason": "Restarted from consolidated repository and verified current route, source, process, and working directory."
+    },
+    {
+      "at": "2026-10-23T12:34:23+00:00",
+      "action": "promote",
+      "id": "k-493d7d",
+      "reason": ""
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+*.bak
+.where.lock
+demo/index.html
+demo/START.md
+demo/obsidian/
+maps/*/index.html
+maps/*/START.md
+maps/*/obsidian/

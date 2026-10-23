@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-10-23T11:52:42+00:00",
+  "deployment": "local-pid-11751-html-91a0c44a61c74cb5",
+  "source_revision": "sha256:a2db33aa948b127772b1071494b5dbc9c0bcec93925c568072d9bd3b47c4b188",
+  "listener": "COMMAND   PID         USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nPython  11751 clarkkoenigs    4u  IPv4 0xbeae80eaecd2b555      0t0  TCP 127.0.0.1:8765 (LISTEN)\n",
+  "process": "11751 Fri Oct 23 06:51:28 2026     /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python outputs/where-sample/so-where/references/where.py --root outputs/where-sample serve",
+  "cwd": "p11751\nfcwd\nn/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more",
+  "http_status": 200,
+  "html_sha256": "91a0c44a61c74cb54fcc91e1e81819d3c98bd31006f26095a890722219cc9c83",
+  "source_sha256": {
+    "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/where.py": "e869b4d100f96a5ccc9979a31d847eb4ef850562ba2d0fbcbbde9623980a6946",
+    "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/so-where/references/dashboard.html": "b93a97d7a9d46acd86295d14d79692ff26f0c21dde76b80dc6745126e2ae32f4",
+    "/Users/clarkkoenigs/Documents/Codex/2026-10-22/i-want-to-create-one-more/outputs/where-sample/registry.json": "de48110023737e33475032e358ea0ae233c85d086c8b14a1a464512ab3413d48"
+  }
+}

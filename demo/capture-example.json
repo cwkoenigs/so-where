@@ -1,0 +1,25 @@
+{
+  "title": "Harbor operating note",
+  "kind": "document",
+  "summary": "Keep deployment configuration beside the service source and link it from the daily map.",
+  "why": "The note should remain in its source folder while the map makes it discoverable.",
+  "owner": "Sample curator",
+  "locations": [
+    {
+      "label": "Original note",
+      "uri": "file:///workspace/notes/harbor-operations.md"
+    }
+  ],
+  "evidence": [
+    {
+      "scope": "identity",
+      "observed_at": "2026-10-21T14:00:00+00:00",
+      "ref": "evidence/harbor-investigation.md#identity",
+      "summary": "Sample note identity and purpose checked in the investigation fixture.",
+      "sample": true
+    }
+  ],
+  "tags": [
+    "harbor"
+  ]
+}
